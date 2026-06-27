@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">ShopGrid</a>
+    <nav class="nav-actions" aria-label="Primary navigation">
+      <a class="nav-link active" href="index.html">Products</a>
+      <a class="cart-link" href="cart.html" aria-label="Open cart">
+        Cart <span id="cartCount">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="listing-header">
+      <div>
+        <p class="eyebrow">DummyJSON catalog</p>
+        <h1>Products</h1>
+      </div>
+      <div class="search-panel">
+        <label for="searchInput">Search products</label>
+        <input id="searchInput" type="search" placeholder="Search by title, brand, category">
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="Product filters">
+      <select id="categoryFilter" aria-label="Filter by category">
+        <option value="all">All categories</option>
+      </select>
+      <select id="sortSelect" aria-label="Sort products">
+        <option value="default">Featured</option>
+        <option value="priceLow">Price: low to high</option>
+        <option value="priceHigh">Price: high to low</option>
+        <option value="ratingHigh">Top rated</option>
+      </select>
+      <span id="resultCount" class="result-count">Loading products...</span>
+    </section>
+
+    <section id="productGrid" class="product-grid" aria-live="polite"></section>
+    <p id="emptyState" class="empty-state hidden">No products match your search.</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
