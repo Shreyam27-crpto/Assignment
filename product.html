@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">ShopGrid</a>
+    <nav class="nav-actions" aria-label="Primary navigation">
+      <a class="nav-link" href="index.html">Products</a>
+      <a class="cart-link" href="cart.html" aria-label="Open cart">
+        Cart <span id="cartCount">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <a class="back-link" href="index.html">Back to products</a>
+    <section id="productDetails" class="details-layout" aria-live="polite">
+      <div class="loading-card">Loading product details...</div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
